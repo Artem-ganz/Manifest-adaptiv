@@ -1,0 +1,6 @@
+.final-section {
+    margin: 0 0 70px;
+    @include media ('>=768px') {
+        margin: 0 0 90px;
+    }
+}

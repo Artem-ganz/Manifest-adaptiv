@@ -1,0 +1,10 @@
+.project-section {
+    margin: 0 0 70px;
+    
+    .container {
+        @include media ('>=1024px') {
+            margin: 0 34px;
+            width: calc( 100% / 2 )
+        }
+    }
+}

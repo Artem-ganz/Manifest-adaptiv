@@ -1,0 +1,297 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+  margin: 0 0 20px;
+}
+
+/* mixin usage */
+/*--------------------------------
+	Responsive ratio
+	Used for creating scalable elements that maintain the same ratio
+	example:
+	.element {
+		@include responsive-ratio(400, 300);
+	}
+*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.05em;
+  color: #565656;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 19px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 34px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+h1 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 50px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 33px;
+  }
+}
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 48px;
+    line-height: 64px;
+  }
+}
+
+h2 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+  margin: 0 0 40px;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 28px;
+    margin: 0 0 50px;
+  }
+}
+
+p {
+  padding-bottom: 20px;
+}
+
+.logo-holder {
+  padding: 18px 0;
+}
+.logo-holder p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.5em;
+  color: #000000;
+}
+
+.fashion-section {
+  margin: 0 0 70px;
+}
+@media (min-width: 768px) {
+  .fashion-section {
+    margin: 0 0 90px;
+  }
+}
+.fashion-section h1 {
+  margin: 0 0 40px;
+}
+@media (min-width: 768px) {
+  .fashion-section h1 {
+    margin: 0 0 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .fashion-section h1 {
+    margin: 0 0 70px;
+  }
+}
+
+.project-section {
+  margin: 0 0 70px;
+}
+@media (min-width: 1024px) {
+  .project-section .container {
+    margin: 0 34px;
+    width: 50%;
+  }
+}
+
+.user-section {
+  margin: 0 0 70px;
+}
+@media (min-width: 768px) {
+  .user-section {
+    margin: 0 0 90px;
+  }
+}
+
+.initial-section {
+  margin: 0 0 70px;
+}
+@media (min-width: 768px) {
+  .initial-section {
+    margin: 0 0 90px;
+  }
+}
+
+.final-section {
+  margin: 0 0 70px;
+}
+@media (min-width: 768px) {
+  .final-section {
+    margin: 0 0 90px;
+  }
+}
+
+.footer {
+  background: #F4F4F4;
+}
+.footer h3 {
+  margin: 0 0 20px;
+  padding-top: 50px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+@media (min-width: 1024px) {
+  .footer h3 {
+    padding-top: 70px;
+  }
+}
+.footer .contact {
+  margin: 0 0 40px;
+}
+.footer .contact a {
+  color: #000000;
+}
+.footer .contact a:hover {
+  font-size: 21px;
+}
+.footer .icons-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  margin: 0 0 40px;
+}
+@media (min-width: 1024px) {
+  .footer .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.footer .icon {
+  border: 1px solid #565656;
+  padding: 10px;
+  color: #565656;
+  background-color: #fff;
+}
+.footer .icon:hover {
+  color: #fff;
+  background-color: #565656;
+}
+.footer .end {
+  padding: 0 0 50px;
+  text-align: center;
+}
+.footer .contact-holder {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .footer .contact-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
